@@ -1,0 +1,8 @@
+{
+  "plot": [2000, 2500],
+  "tags": [],
+  "ban_tags": ["fft", "*special"],
+  "handles": ["_Stefan_", "tox1c_kid"],
+  "number_of_problems": 4,
+  "output_tags": false
+}
