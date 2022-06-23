@@ -59,7 +59,8 @@ good_problems = []
 for i in range(len(problems) - 1):
     if problems[i].get('rating') == None:
         continue
-    if len(problems[i]['tags']) > 0 and problems[i]['rating'] >= data['plot'][0] and problems[i]['rating'] <= \
+    if problems[i]['contestId'] >= data['minimum_contestId'] and len(problems[i]['tags']) > 0 and problems[i][
+        'rating'] >= data['plot'][0] and problems[i]['rating'] <= \
             data['plot'][1] and search(ban, [
         problems[i]['contestId'], problems[i]['index']]) == False and (
             len(list((Counter(problems[i]['tags']) & Counter(data['ban_tags'])).elements())) == 0):
