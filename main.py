@@ -76,6 +76,6 @@ for i in range(min(len(good_problems), data['number_of_problems'])):
     ans.append(good_problems[id])
 
 for i in range(len(ans)):
-    if data['need_tags'] == True:
+    if data['output_tags'] == True:
         print(ans[i]['tags'])
     print(URL_PROBLEM + '/' + str(ans[i]['contestId']) + '/problem/' + ans[i]['index'])
