@@ -3,7 +3,7 @@
 ```
 pip install requests2
 ```
-json формат:
+json формат для ввода из файла input.json:
 ```
 {
   "plot": [2000, 2500], // рейтинг задач [l, r]
