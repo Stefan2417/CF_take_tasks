@@ -43,7 +43,8 @@ for i in range(len(data['handles'])):
     else:
         submissions = submissions['result']
         for j in range(len(submissions)):
-            ban.append([submissions[j]['problem']['contestId'], submissions[j]['problem']['index']])
+            if submissions[j].get('problem') != None and submissions[j]['problem'].get('contestId') != None:
+                ban.append([submissions[j]['problem']['contestId'], submissions[j]['problem']['index']])
 ban.sort()
 
 problems = requests.get(URL_PROBLEMSET, params=headers_tags).json()
